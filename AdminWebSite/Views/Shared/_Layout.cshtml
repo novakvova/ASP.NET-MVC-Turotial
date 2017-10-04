@@ -33,129 +33,18 @@
         <div class="col-2 col-m-3 leftpanel">
             <div class="content">
                 <ul class="sidemenu">
-                    <li><a class="menulinks active" id="TourLink" Addid="defaultOpen">Add new tour</a></li>
-                    <li><a class="menulinks" id="CountryLink">Country</a></li>
-                    <li><a class="menulinks" id="TownLink">Town</a></li>
-                    <li><a class="menulinks" id="HotelLink">Hotel</a></li>
+                    <li>
+                        <a class="menulinks active" href="@Url.Action("Index","Country")">Country</a>
+                    </li>
+                    <li>
+                        @Html.ActionLink("City", "Index","City", null, new { @class="menulinks" })
+                    </li>
+                    
                 </ul>
             </div>
 
         </div>
-        <div class="col-10 col-m-9 rightpanel">
-            <div class="adminMenu">
-                <h2>Admin menu</h2>
-                <div id="addNewTourTab" class="menucontent">
-                    <div id="row" class="row">
-                        <div id="swapbox">
-                            <div id="selectBox" class="col-4 col-m-12">
-                                <label class="labelSelectBox" for="">Select country</label>
-                                <input type="text" placeholder="country..." id="userInputCountry">
-                                <div id="droplistContentC" class="dropdown-contentC"></div>
-                            </div>
-                            <div id="selectBox" class="col-4 col-m-12">
-                                <label class="labelSelectBox" for="">Select town</label>
-                                <input type="text" placeholder="town..." id="userInputTown">
-                                <div id="droplistContentT" class="dropdown-contentT"></div>
-                            </div>
-                            <div id="selectBox" class="col-4 col-m-12">
-                                <label class="labelSelectBox" for="">Select town</label>
-                                <input type="text" placeholder="hotel..." id="userInputHotel">
-                                <div id="droplistContentH" class="dropdown-contentH"></div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div id="row" class="row">
-
-                        <div id="selectBox" class="col-1 col-m-5 col-s-5">
-                            <label for="">Rating</label>
-                            <br>
-                            <select name="ratingSelect" id="ratingSelect">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                        <div id="selectBox" class="settingforPrice col-3 col-m-5 col-s-7">
-                            <label for="">Price</label>
-                            <br>
-                            <input id="inputPrice" type="text">
-                        </div>
-                        <!-- <div class="form-group col-8 col-m-12 col-s-12">
-                          <label for="comment">Description:</label>
-                          <textarea class="form-control" rows="5" id="comment"></textarea>
-                        </div> -->
-                        <div id="selectBox" class="col-8 col-m-12 col-s-12">
-                            <label for="">Description</label>
-                            <br>
-                            <textarea name="" id="textareaDescription"></textarea>
-                        </div>
-                    </div>
-                    <div id="contentPanel">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum quibusdam molestiae soluta laudantium saepe in sunt iste dolore quia et assumenda nihil, ratione, omnis non delectus error impedit rem quod.
-                    </div>
-                    <div id="row" class="row">
-                        <div class="btnWrap ">
-                            <button class="mybtn defaultBtn">Add tour</button>
-                        </div>
-                    </div>
-                </div>
-                <div id="CountryTab" class="menucontent">
-                    <div id="row" class="row">
-                        <label for="">Country</label>
-                        <input type="text">
-                        <div id="row" class="row">
-                            <div class="btnWrap">
-                                <button class="mybtn defaultBtn">Add Counry</button>
-                            </div>
-                            <div class="btnWrap">
-                                <button class="mybtn defaultBtn">Edit Country</button>
-                            </div>
-                            <div class="btnWrap">
-                                <button class="mybtn defaultBtn">Delete Country</button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div id="TownTab" class="menucontent">
-                    <div id="row" class="row">
-                        <label for="">Town</label>
-                        <input type="text">
-                        <div id="row" class="row">
-                            <div class="btnWrap">
-                                <button class="mybtn defaultBtn">Add Town</button>
-                            </div>
-                            <div class="btnWrap">
-                                <button class="mybtn defaultBtn">Edit Town</button>
-                            </div>
-                            <div class="btnWrap">
-                                <button class="mybtn defaultBtn">Delete Town</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="HotelTab" class="menucontent">
-                    <div id="row" class="row">
-                        <label for="">Hotel</label>
-                        <input type="text">
-                        <div id="row" class="row">
-                            <div class="btnWrap">
-                                <button class="mybtn defaultBtn">Add Hotel</button>
-                            </div>
-                            <div class="btnWrap">
-                                <button class="mybtn defaultBtn">Edit Hotel</button>
-                            </div>
-                            <div class="btnWrap">
-                                <button class="mybtn defaultBtn">Delete Hotel</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="col-10 col-m-12 dataBody" id="dataBody">
             @RenderBody()
         </div>
