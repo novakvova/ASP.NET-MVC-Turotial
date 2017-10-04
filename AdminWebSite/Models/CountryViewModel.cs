@@ -19,8 +19,11 @@ namespace AdminWebSite.Models
     }
     public class CountryCreateViewModel
     {
+        [Required(ErrorMessage ="Поле є обовзяковим")]
         [Display(Name = "Назва")]
         public string Name { get; set; }
+        [Required(ErrorMessage = "Поле є обовзяковим")]
+        [Range(1,short.MaxValue,ErrorMessage ="12345555")]
         [Display(Name = "Пріорітет")]
         public int Priority { get; set; }
     }
