@@ -16,6 +16,7 @@ namespace AdminWebSite.Controllers
         public CityController()
         {
             _context = new EFContext();
+            ViewBag.MenuCity = true;
         }
         // GET: City
         public ActionResult Index()
